@@ -1,4 +1,4 @@
-package com.ort.dap_actinicio
+package com.ort.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var label : TextView
     lateinit var btnShow : Button
+    lateinit var btnHide : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,11 +18,15 @@ class MainActivity : AppCompatActivity() {
 
         label = findViewById(R.id.TEXT1)
         btnShow = findViewById(R.id.BUTTON1)
+        btnHide = findViewById(R.id.BUTTON2)
 
         label.text = ""
 
         btnShow.setOnClickListener {
-            label.text = "hace calor"
+            label.text = "hola!"
+        }
+        btnHide.setOnClickListener{
+            label.text = ""
         }
     }
 
